@@ -1,0 +1,58 @@
+doctype 5
+html
+    head
+        title igo.is
+        link(href='http://fonts.googleapis.com/css?family=Dr+Sugiyama', rel='stylesheet', type='text/css')
+        link(href='/components/bootstrap/less/bootstrap.css', type="text/css", rel='stylesheet')
+        link(href='/css/main.css', type="text/css", rel='stylesheet')
+        script(src='/components/jquery/jquery.min.js')
+        script(src='/components/jcanvas/index.js')
+        script(src='/components/handlebars/handlebars.js')
+        script(src='/socket.io/socket.io.js')
+        script(src='/js/ui.js')
+        script(src='/js/game_data.js')
+    body
+        .navbar.navbar-fixed-top
+            .navbar-inner
+                .header-inner.span6.text-left
+                    .logo Hi&eth; &Iacute;slenska Gof&eacute;lag
+                .header-inner.span6.offset8.text-right
+                    a#whatis.mb Hva&eth; er Go?
+                    a#about.mb Um f&eacute;lagi&eth;
+                    a#english.mb English
+        .container
+            .row
+                #left.span6
+                    #content
+                #right.container.span6
+                    .row
+                        #game.span8(align='center')
+                        canvas#game-canvas(width=550, height=550)
+                        #game-info.container.span7
+
+        script#game_info_template(type='text/x-handlebars-template').
+            <div class="row-fluid">
+                <div class="well span4">
+                    <p style="margin-bottom: 0px;">{{white}} {{whiteRank}}</p>
+                    <div style="margin-bottom: 0px; text-align: center;">
+                        <strong><span id="game-time-white">09:14 (18)</span></strong>
+                    </div>
+                    <p class="pull-right" style="margin-bottom: 0px;"><small>Fangar: {{whiteCaptures}}</small></p>
+                </div>
+                <div class="span4" style="text-align: center;">
+                    <p style="margin-bottom:0px"><strong>Leikur {{moveNr}}</strong></p>
+                    <p style="margin-top:0px;"><small>({{move}})</small></p>
+                    <div id="game-result" style="text-align: center;" />
+                </div>
+                <div class="well span4">
+                    <p style="margin-bottom: 0px;">{{black}} {{blackRank}}</p>
+                    <div style="margin-bottom: 0px;" align="center">
+                        <strong><span id="game-time-black">09:14 (18)</span></strong>
+                    </div>
+                    <p class="pull-right" style="margin-bottom: 0px;"><small>Fangar: {{blackCaptures}}</small></p>
+                </div>
+            </div>
+
+        script#game_result_template(type='text/x-handlebars-template').
+            <p style="margin-bottom:0px"><strong>&Uacute;rslit:</strong></p>
+            <p style="margin-top:0px;">{{winner}}+{{result}}</small></p>

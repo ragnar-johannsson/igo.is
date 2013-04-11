@@ -1,0 +1,72 @@
+html {
+    overflow-y: scroll;
+}
+
+body {
+    padding-top: 80px;
+}
+
+.navbar-inner {
+    background-image: url('/images/header.jpg');
+    min-height: 80px;
+}
+
+.header-inner {
+    position: absolute;
+    bottom: 0;
+}
+
+.logo {
+    font-family: 'Dr Sugiyama', cursive;
+    font-size: 50px;
+    color: white;
+    text-shadow: -2px 0 black, 0 2px black, 1px 0 black, 0 -1px black;
+    margin-bottom: 25px;
+    letter-spacing: 3px;
+}
+
+.mb {
+    font-family: Georgia, Times, "Times New Roman", serif;
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    margin-right: 20px;
+    margin-top: -10px;
+}
+
+.mb:hover {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#game-canvas {
+    margin-top: 30px;
+}
+
+#content {
+    text-align: justify;
+    margin-left: -20px;
+    margin-right: 70px;
+    margin-top: 30px;
+}
+
+.content-pic {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border: 1px solid black;
+}
+
+.content-pic-text {
+    margin-top: -20px;
+    margin-left: -15px;
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 10px;
+    text-align: right;
+}
+
+.content-pic-container {
+    text-align: center;
+}
