@@ -86,7 +86,7 @@ const SGF_PLAYER = (() => {
       infoElem.innerHTML = `${event} ${round} ${date} ${komi} ${result}`
     },
     board: {
-      background: '#D0B262'
+      background: '#f2be5c'
     }
   });
 
